@@ -78,18 +78,9 @@ const ItemCard = ({ item, cardHeight }: { item: Item; cardHeight: number }) => {
         try {
             // Calculate final percentage: base + all pending updates
             const finalPercentage = basePercentageRef.current + pendingUpdatesRef.current * 2;
-            
+
             // Use ref to get the latest localEnergy value to avoid stale closure
             const finalEnergy = currentLocalEnergyRef.current;
-            
-            console.log('Energy sync debug:', {
-                itemTitle: item.title,
-                userEnergy: user?.energy,
-                localEnergy: currentLocalEnergyRef.current,
-                pendingUpdates: pendingUpdatesRef.current,
-                finalEnergy: finalEnergy,
-                calculation: `${currentLocalEnergyRef.current} (current) - ${pendingUpdatesRef.current} (pending) = ${currentLocalEnergyRef.current - pendingUpdatesRef.current}`
-            });
 
             const response = await itemApi.progress(user.id, item.id, finalPercentage, finalEnergy);
 
@@ -133,32 +124,19 @@ const ItemCard = ({ item, cardHeight }: { item: Item; cardHeight: number }) => {
             }
             pendingUpdatesRef.current = 0;
         }
-    }, [user?.id, user?.energy, item.title, item.id, setUser, setLocalEnergy, setItems]);
+    }, [user?.id, user?.energy, item.id, setUser, setLocalEnergy, setItems]);
 
     const handleCardClick = () => {
         if (!user?.id || localEnergy <= 0) return;
-
-        console.log('Click debug - Before:', {
-            itemTitle: item.title,
-            localEnergy,
-            pendingUpdates: pendingUpdatesRef.current
+        // Update local state immediately for instant feedback
+        setLocalPercentage(prev => prev + 2);
+        setLocalEnergy(prev => {
+            const newEnergy = prev - 1;
+            // Update ref immediately for accurate API calls
+            currentLocalEnergyRef.current = newEnergy;
+            return newEnergy;
         });
-
-                    // Update local state immediately for instant feedback
-            setLocalPercentage(prev => prev + 2);
-            setLocalEnergy(prev => {
-                const newEnergy = prev - 1;
-                // Update ref immediately for accurate API calls
-                currentLocalEnergyRef.current = newEnergy;
-                return newEnergy;
-            });
-            pendingUpdatesRef.current += 1;
-
-        console.log('Click debug - After:', {
-            itemTitle: item.title,
-            localEnergy: localEnergy - 1,
-            pendingUpdates: pendingUpdatesRef.current
-        });
+        pendingUpdatesRef.current += 1;
 
         // Clear existing timeout
         if (debounceTimeoutRef.current) {
@@ -281,7 +259,7 @@ const ItemCard = ({ item, cardHeight }: { item: Item; cardHeight: number }) => {
                             [text-shadow:0px_0px_3px_rgb(0_0_0_/_1.00)]
                           '
                         >
-                            {item.level === MAX_LEVEL ? 'Tebrikler!' : 'Yükselt'}
+                            {item.level === MAX_LEVEL ? 'Max!' : 'Yükselt'}
                         </button>
                     ) : (
                         <button

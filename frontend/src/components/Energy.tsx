@@ -90,7 +90,6 @@ const Energy = () => {
         prevSecondsRef.current = null;
 
         if (user?.energy_reload_time && user.energy_reload_time <= Date.now()) {
-            console.log('reloadEnergy');
             reloadEnergy();
         }
     }, [user?.energy_reload_time]);
@@ -98,7 +97,6 @@ const Energy = () => {
     // Sync localEnergy with user.energy when it changes
     useEffect(() => {
         if (user?.energy !== undefined && !isReloading) {
-            console.log('Syncing localEnergy with user.energy:', user.energy);
             setLocalEnergy(user.energy);
         }
     }, [user?.energy, isReloading, setLocalEnergy]);
