@@ -29,7 +29,10 @@ export class ItemController {
       this.userService.findOne(userId),
     ]);
 
-    (user as any).id = (user as any)?._id;
+    if (user) {
+      (user as any).id = (user as any)?._id;
+    }
+
     return { items, user };
   }
 }
