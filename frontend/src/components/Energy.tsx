@@ -129,7 +129,7 @@ const Energy = () => {
                     className='absolute bottom-0 -left-4'
                 />
                 <div
-                    className='h-4 bg-pink-500 rounded-full shadow-[0px_0px_2px_0px_rgba(238,57,168,1.00),inset_0px_0px_3px_0px_rgba(255,255,255,1.00)] transition-all duration-200'
+                    className='h-4 bg-pink-500 rounded-full shadow-[0px_0px_2px_0px_rgba(238,57,168,1.00),inset_0px_0px_3px_0px_rgba(255,255,255,1.00)] transition-width duration-200'
                     style={{ width: `${localEnergy}%` }}
                 />
                 <div className='text-orange-300 text-xs font-bold absolute right-3 top-1/2 -translate-y-1/2'>

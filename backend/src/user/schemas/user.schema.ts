@@ -23,7 +23,7 @@ export class User {
 	@Prop({ default: 100 })
 	energy: number;
 
-	@Prop({ default: Date.now() + 2 * 60 * 1000 })
+	@Prop({ required: true })
 	energy_reload_time: number;
 }
 

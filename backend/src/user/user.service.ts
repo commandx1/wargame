@@ -29,6 +29,7 @@ export class UserService {
   }
 
   async create(userData: Partial<User>): Promise<User> {
+    userData.energy_reload_time = Date.now() + (30 * 1000);
     const createdUser = new this.userModel(userData);
     return createdUser.save();
   }
