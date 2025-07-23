@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "title": "Uzun Kılıç",
+      "level": 1,
+      "description": "Gümüş Diş Sade, keskin bir savaş kılıcı.",
+      "name": "uzun_kilic_1"
+    },
+    {
+      "title": "Uzun Kılıç",
+      "level": 2,
+      "description": "Zümrüt Yürek Can alıcı darbeler için güçlendirildi.",
+      "name": "uzun_kilic_2"
+    },
+    {
+      "title": "Uzun Kılıç",
+      "level": 3,
+      "description": "Altın Pençe Kralların kanını döken efsanevi keskinlik.",
+      "name": "uzun_kilic_3"
+    },
+    {
+      "title": "Savaş Baltası",
+      "level": 1,
+      "description": "Ay Parçası Hafif ve hızlı bir balta.",
+      "name": "savas_baltasi_1"
+    },
+    {
+      "title": "Savaş Baltası",
+      "level": 2,
+      "description": "Zümrüt Kesik Derin yaralar açan büyülü çelik.",
+      "name": "savas_baltasi_2"
+    },
+    {
+      "title": "Savaş Baltası",
+      "level": 3,
+      "description": "Efsane Yarma Tek vuruşta kale kapısı deler.",
+      "name": "savas_baltasi_3"
+    },
+    {
+      "title": "Büyü Asası",
+      "level": 1,
+      "description": "Gölge Dalı Temel büyü asası.",
+      "name": "buyu_asasi_1"
+    },
+    {
+      "title": "Büyü Asası",
+      "level": 2,
+      "description": "Zümrüt Kök Doğanın gücüyle titreşir.",
+      "name": "buyu_asasi_2"
+    },
+    {
+      "title": "Büyü Asası",
+      "level": 3,
+      "description": "Altın Kök Yıldızları yere indirir, zamanı büker.",
+      "name": "buyu_asasi_3"
+    },
+    {
+      "title": "Kalkan",
+      "level": 1,
+      "description": "Gümüş Siperi Basit bir koruma aracı.",
+      "name": "kalkan_1"
+    },
+    {
+      "title": "Kalkan",
+      "level": 2,
+      "description": "Zümrüt Zırh Gelen saldırıyı yansıtır.",
+      "name": "kalkan_2"
+    },
+    {
+      "title": "Kalkan",
+      "level": 3,
+      "description": "Altın Duvar Tanrılar bile geçemez.",
+      "name": "kalkan_3"
+    },
+    {
+      "title": "Savaş Çekici",
+      "level": 1,
+      "description": "Taş Parçalayıcı Ağır ve yıkıcı.",
+      "name": "savas_cekici_1"
+    },
+    {
+      "title": "Savaş Çekici",
+      "level": 2,
+      "description": "Zümrüt Ezici Zırhları paramparça eder.",
+      "name": "savas_cekici_2"
+    },
+    {
+      "title": "Savaş Çekici",
+      "level": 3,
+      "description": "Altın Hüküm Dünyayı çatlatır, düşmanları ezer.",
+      "name": "savas_cekici_3"
+    },
+    {
+      "title": "Eğri Kılıç",
+      "level": 1,
+      "description": "Gümüş Pençe Hafif ve çevik bir bıçak.",
+      "name": "egri_kilic_1"
+    },
+    {
+      "title": "Eğri Kılıç",
+      "level": 2,
+      "description": "Zümrüt Çengel Derin kesikler için eğildi.",
+      "name": "egri_kilic_2"
+    },
+    {
+      "title": "Eğri Kılıç",
+      "level": 3,
+      "description": "Altın Yılan Gölge gibi kayar, kaderi biçer.",
+      "name": "egri_kilic_3"
+    },
+    {
+      "title": "Kısa Kılıç",
+      "level": 1,
+      "description": "Gölge Kesik Hızlı saldırılar için ideal.",
+      "name": "kisa_kilic_1"
+    },
+    {
+      "title": "Kısa Kılıç",
+      "level": 2,
+      "description": "Zümrüt Fısıltı Sessiz ama ölümcül.",
+      "name": "kisa_kilic_2"
+    },
+    {
+      "title": "Kısa Kılıç",
+      "level": 3,
+      "description": "Altın Dilim Zamanda bile iz bırakır.",
+      "name": "kisa_kilic_3"
+    },
+    {
+      "title": "Büyü Kitabı",
+      "level": 1,
+      "description": "Gümüş Sayfalar Temel büyüleri içerir.",
+      "name": "buyu_kitabi_1"
+    },
+    {
+      "title": "Büyü Kitabı",
+      "level": 2,
+      "description": "Zümrüt Kehanet Geleceği okur, kaderi değiştirir.",
+      "name": "buyu_kitabi_2"
+    },
+    {
+      "title": "Büyü Kitabı",
+      "level": 3,
+      "description": "Altın Kitabe Evrenin sırlarını fısıldar, gerçekliği ezer.",
+      "name": "buyu_kitabi_3"
+    }
+  ]
+}
