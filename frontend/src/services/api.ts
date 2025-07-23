@@ -81,7 +81,7 @@ export const itemApi = {
 		percentage: number,
 		energy: number,
 	) => api.put(`/items/${itemId}/progress`, { userId, percentage, energy }),
-	levelUp: (itemId: string) => api.put(`/items/${itemId}/level-up`),
+	levelUp: (itemId: string, energy: number) => api.put(`/items/${itemId}/level-up`, { energy }),
 };
 
 export default api;

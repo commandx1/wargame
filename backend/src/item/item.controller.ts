@@ -18,8 +18,8 @@ export class ItemController {
   }
 
   @Put(':id/level-up')
-  async levelUp(@Param('id') itemId: string) {
-    return this.itemService.levelUp(itemId);
+  async levelUp(@Param('id') itemId: string, @Body('energy') energy: number) {
+    return this.itemService.levelUp(itemId, energy);
   }
 
   @Get()

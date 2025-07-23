@@ -71,12 +71,15 @@ export class ItemService {
       .exec();
   }
 
-  async levelUp(itemId: string): Promise<{ item: Item }> {
+  async levelUp(itemId: string, energy: number): Promise<{ item: Item }> {
     // Get current item
     const currentItem = await this.itemModel.findById(itemId).exec();
     if (!currentItem) {
       throw new NotFoundException('Item not found');
     }
+
+    // Update user energy
+    await this.userModel.findByIdAndUpdate(currentItem.userId, { energy }, { new: true }).exec();
 
     let percentage = 0;
     // Check if item can level up

@@ -173,7 +173,9 @@ const ItemCard = ({ item, cardHeight }: { item: Item; cardHeight: number }) => {
             setTimeout(async () => {
                 try {
                     // Call backend level up API
-                    const response = await itemApi.levelUp(item.id);
+                    const finalEnergy = currentLocalEnergyRef.current;
+
+                    const response = await itemApi.levelUp(item.id, finalEnergy);
                     const upgradedItem = response.data.item;
 
                     // Play sound based on new level
